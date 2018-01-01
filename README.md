@@ -36,8 +36,8 @@ What to do:
 Ok, so for some reason KDE Plasma 5 has to separate lock screens.
 
 What to do for this one:
-> make a link to a picture. DO: `sudo ln -fs ~/Pictures/Wallpapers/Image.png /usr/share/sddm/themes/breeze/0_Lock.png`. You have to set this just once.
+> make a link to a picture. DO: `sudo ln -fs ~/Pictures/Wallpapers/0_Lock.png /usr/share/sddm/themes/breeze/0_Lock.png`. You have to set this just once.
 
-> then go to `Login Screen (SDDM)` > Background > set `0_Lock.png` as the wallpaper.
+> now make sure this file is actually going to be used as a wallpaper ```sudo bash -c "echo 'background=0_Lock.png' >> /usr/share/sddm/themes/breeze/theme.conf"```.
 
 > in order to change it simply do `ln -fs ~/Pictures/Wallpapers/Image.png ~/Pictures/Wallpapers/0_Lock.png` again. Here because you don't want to have to type your password every time. So you have in /usr a link that points to a link that points to an image.
