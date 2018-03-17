@@ -1,2 +1,15 @@
 #!/bin/bash
-qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript 'var allDesktops = desktops();print (allDesktops);for (i=0;i<allDesktops.length;i++) {d = allDesktops[i];d.wallpaperPlugin = "org.kde.image";d.currentConfigGroup = Array("Wallpaper", "org.kde.image", "General");d.writeConfig("Image", "file:///home/raitaro/Pictures/Wallpapers/picture.png")}'
+
+full_image_path=$(realpath "$1")
+wallpaper_set_script="var allDesktops = desktops();
+    print (allDesktops);
+    for (i=0;i<allDesktops.length;i++)
+    {
+        d = allDesktops[i];
+        d.wallpaperPlugin = 'org.kde.image';
+        d.currentConfigGroup = Array('Wallpaper', 'org.kde.image', 'General');
+        d.writeConfig('Image', 'file://${full_image_path}')
+    }"
+
+
+qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "${wallpaper_set_script}"
