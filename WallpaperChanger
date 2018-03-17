@@ -1,4 +1,16 @@
 #!/bin/bash
 
-sed -i "s/Wallpapers\/[[:alpha:]]*.*/Wallpapers\/$1\")}\'/" ~/bin/ksetwallpaper
-~/bin/ksetwallpaper
+desktop_dir="~/Pictures/Wallpapers/"
+setdesktop() {
+	#gsettings set org.gnome.desktop.background picture-uri "file://$desktop_dir$1"
+	~/bin/ksetwallpaper "$desktop_dir$1"
+return
+}
+
+# Usage:
+setdesktop filename
+
+
+
+# Obviously this can be more expansive. My actual script is way to personalized to be proper for github,
+# but feel free to add functions and such to this script, like I have.
