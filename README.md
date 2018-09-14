@@ -10,7 +10,7 @@ The way I got around this was simple. I just use sed to replace `picture.png` fr
 
 ### Instalation
 ```
-git clone https://github.com/RaitaroH/KDE-Terminal-Wallpaper-Changer.git
+git clone https://gitlab.com/RaitaroH/KDE-Terminal-Wallpaper-Changer.git
 mv KDE-Terminal-Wallpaper-Changer/ksetwallpaper ~/bin
 mv KDE-Terminal-Wallpaper-Changer/WallpaperChanger ~/bin
 ```
