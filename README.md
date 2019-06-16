@@ -24,8 +24,8 @@ The script now can tell what kind of file is given and use that. For this to wor
 
 In order to use this script for say ![Zren's inactive blur](https://store.kde.org/p/1206340/) or ![Zren's animatedhue](https://store.kde.org/p/1190533/) do:
 ```
-~/bin/ksetwallpaper "$HOME/Pictures/Katie.png" "com.github.zren.inactiveblur" "Image"
-~/bin/ksetwallpaper "$HOME/Pictures/Katie.png" "com.github.zren.animatedhue" "Image"
+ksetwallpaper "$HOME/Pictures/Katie.png" "com.github.zren.inactiveblur" "Image"
+ksetwallpaper "$HOME/Pictures/Katie.png" "com.github.zren.animatedhue" "Image"
 ```
 
 If you want to use this with dmenu/rofi simply `ls` or `find` the folder you want and pass it throug dmenu/rofi then use ksetwallpaper to set that wallpaper. Here is a basic example:
@@ -46,6 +46,12 @@ What to do:
 > then go to `Screen Locking` > Wallpaper > set `0_Lock.png` as the wallpaper.
 
 > in order to change it simply to `ln -fs` again. Simple.
+
+It is possible that the method above doesn't actually change your wallpaper actually, due to a config file issue. For that see the following example:
+
+```
+kwriteconfig5 --file kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key Image "file:///home/raitaro/Pictures/Wallpapers/0_Lock.png"
+```
 
 # Login screen
 Ok, so for some reason KDE Plasma 5 has to separate lock screens.
