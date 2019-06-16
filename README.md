@@ -33,6 +33,9 @@ ksetwallpaper "$HOME/Pictures/Katie.png" "com.github.zren.inactiveblur" "Image"
 ksetwallpaper "$HOME/Pictures/Katie.png" "com.github.zren.animatedhue" "Image"
 ```
 
+### Context menu scripts
+You can move `SetAsWallpaper.desktop` and `SetAsWallpaperBlur.desktop` to `~/.local/share/kservices5/ServiceMenus/` and then you can right click on an image/video for example to set it as an wallpaper. The Blur variant only works with ![Zren's inactive blur](https://store.kde.org/p/1206340/) and only with images.
+
 #### dmenu/rofi
 If you want to use this with dmenu/rofi simply `ls` or `find` the folder you want and pass it throug dmenu/rofi then use ksetwallpaper to set that wallpaper. Here is a basic example:
 
