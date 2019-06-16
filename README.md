@@ -33,7 +33,7 @@ ksetwallpaper "$HOME/Pictures/Katie.png" "com.github.zren.inactiveblur" "Image"
 ksetwallpaper "$HOME/Pictures/Katie.png" "com.github.zren.animatedhue" "Image"
 ```
 
-### Context menu scripts
+#### Context menu scripts
 You can move `SetAsWallpaper.desktop` and `SetAsWallpaperBlur.desktop` to `~/.local/share/kservices5/ServiceMenus/` and then you can right click on an image/video for example to set it as an wallpaper. The Blur variant only works with ![Zren's inactive blur](https://store.kde.org/p/1206340/) and only with images.
 
 #### dmenu/rofi
@@ -46,7 +46,6 @@ I use ![fd](https://github.com/sharkdp/fd) here but anything goes. I simply sear
 
 
 #### pywal
-
 For ![pywal](https://github.com/dylanaraps/pywal) you can either make some fucntion as this one:
 ```
 wal-tile() {
@@ -68,7 +67,7 @@ sed -i "/\ #modif$/s/1\ .*\ #/1\ $color1\ #/" .conky/MyConky/GothamDarkKDE
 
 Where in the Conky file you have color defined as: `color1 AF5237 #modif` where the comment is needed. The code above will take the color wal generated and change it in conky so it matches your desktop.
 
-#### Know issues
+#### Known issues
 
 + Locking the widgets makes the script not work anymore
 + Rog131's scripts seem to make plasmashell crash quite often
