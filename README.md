@@ -11,6 +11,8 @@ The purpose? Changing wallpapers from scripts, time based wallpapers... also loc
 git clone https://gitlab.com/RaitaroH/KDE-Terminal-Wallpaper-Changer.git
 mv KDE-Terminal-Wallpaper-Changer/ksetwallpaper ~/bin
 mv KDE-Terminal-Wallpaper-Changer/WallpaperChanger ~/bin
+chmod +x ~/bin/ksetwallpaper
+chmod +x ~/bin/WallpaperChanger
 ```
 ksetwallpaper is the actual script that changes walls and can be used by itself. WallpaperChanger is a script example for extra automations such as time based wallpaper changing etc.
 
