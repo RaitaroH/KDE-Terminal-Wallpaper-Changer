@@ -4,9 +4,7 @@ Looking around I found the code needed to change wallpapers in KDE. Unfortunatel
 Here is where I took the code from:
 https://store.kde.org/p/1169583/
 
-The purpose? Time based wallpapers... also lock screen wallpaper changing based on time or something else.
-
-The way I got around this was simple. I just use sed to replace `picture.png` from`"file:///home/raitaro/Pictures/Wallpapers/picture.png"`with whatever image I want specify. The gist of it is sed then you call the ksetwallpaper scrpt. That's it.
+The purpose? Changing wallpapers from scripts, time based wallpapers... also lock screen wallpaper changing based on time or something else.
 
 ### Instalation
 ```
@@ -14,17 +12,15 @@ git clone https://gitlab.com/RaitaroH/KDE-Terminal-Wallpaper-Changer.git
 mv KDE-Terminal-Wallpaper-Changer/ksetwallpaper ~/bin
 mv KDE-Terminal-Wallpaper-Changer/WallpaperChanger ~/bin
 ```
-ksetwallpaper is the actual script that changes walls and can be used by itself. Wallpaper-Changer is a script example for extra automations such as time based wallpaper changing etc.
+ksetwallpaper is the actual script that changes walls and can be used by itself. WallpaperChanger is a script example for extra automations such as time based wallpaper changing etc.
 
 ### Usage
-You can use ksetwallpaper by itself. WallpaperChanger is just for some automation. Example usage:
-
 ```
 ksetwallpaper $HOME/Pictures/Katie.png
 ksetwallpaper $HOME/Pictures/video.mp4
 ksetwallpaper $HOME/Pictures/animate.gif
 ```
-The script now can tell what kind of file is given and use that. For this to work with videos and gifs you need the respective scripts. For this use the "Get new plugins" from the "Set desktop wallpaper" menu.
+The script now can tell what kind of file is given and use that. For this to work with videos and gifs you need the respective plugins as plasma5 does not support out of the box gifs and videos. For this use the "Get new plugins" from the "Set desktop wallpaper" menu.
 
 Problems: Do not lock your widgets.
 
