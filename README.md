@@ -14,11 +14,17 @@ git clone https://gitlab.com/RaitaroH/KDE-Terminal-Wallpaper-Changer.git
 mv KDE-Terminal-Wallpaper-Changer/ksetwallpaper ~/bin
 mv KDE-Terminal-Wallpaper-Changer/WallpaperChanger ~/bin
 ```
-Make sure you change `"file:///home/raitaro/Pictures/Wallpapers/picture.png"` at the end of ksetwallpaper with your wallpaper directory.
+ksetwallpaper is the actual script that changes walls and can be used by itself. Wallpaper-Changer is a script example for extra automations such as time based wallpaper changing etc.
 
 ### Usage
-WallpaperChanger filename
-No path required because that is set in ksetwallpaper.
+You can use ksetwallpaper by itself. WallpaperChanger is just for some automation. Example usage:
+
+```
+ksetwallpaper $HOME/Pictures/Katie.png
+ksetwallpaper $HOME/Pictures/video.mp4
+ksetwallpaper $HOME/Pictures/animate.gif
+```
+The script now can tell what kind of file is given and use that. For this to work with videos and gifs you need the respective scripts. For this use the "Get new plugins" from the "Set desktop wallpaper" menu.
 
 Problems: Do not lock your widgets.
 
