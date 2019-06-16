@@ -22,6 +22,19 @@ ksetwallpaper $HOME/Pictures/animate.gif
 ```
 The script now can tell what kind of file is given and use that. For this to work with videos and gifs you need the respective plugins as plasma5 does not support out of the box gifs and videos. Unfortunately the scripts that I use are the older versions from rog131 which are not available anymore, but I have put them in zip in this repo and need to be extracted in `~/.local/share/plasma/wallpapers/`.
 
+In order to use this script for say ![Zren's inactive blur](https://store.kde.org/p/1206340/) or ![Zren's animatedhue](https://store.kde.org/p/1190533/) do:
+```
+~/bin/ksetwallpaper "$HOME/Pictures/Katie.png" "com.github.zren.inactiveblur" "Image"
+~/bin/ksetwallpaper "$HOME/Pictures/Katie.png" "com.github.zren.animatedhue" "Image"
+```
+
+If you want to use this with dmenu/rofi simply `ls` or `find` the folder you want and pass it throug dmenu/rofi then use ksetwallpaper to set that wallpaper. Here is a basic example:
+
+```
+ksetwallpaper $(fd --full-path $HOME/Pictures/Wallpapers -e jpg -e jpeg -e png -e gif -e mp4 -e webm -d 2 | rofi -dmenu -i -lines 9 -p "What wallpaper?")
+```
+I use ![fd](https://github.com/sharkdp/fd) here but anything goes. I simply search in Pictures/Wallpapers, with a depth of 2 for any images/gif/videos you might want. I pass those through rofi and then the result is set with ksetwallpaper.
+
 Problems: Locking the widgets makes the script not work anymore. Rog131's scripts seem to make plasmashell crash quite often.
 
 # Lock screen
