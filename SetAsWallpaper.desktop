@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=image/*;video/*;
+Actions=SetAsWallpaper;
+X-KDE-Priority=TopLevel
+X-KDE-StartupNotify=false
+
+[Desktop Action SetAsWallpaper]
+Icon=preferences-desktop-wallpaper
+Name=Set as Wallpaper
+Exec=bash ~/bin/ksetwallpaper %u
