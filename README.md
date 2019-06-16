@@ -20,9 +20,9 @@ ksetwallpaper $HOME/Pictures/Katie.png
 ksetwallpaper $HOME/Pictures/video.mp4
 ksetwallpaper $HOME/Pictures/animate.gif
 ```
-The script now can tell what kind of file is given and use that. For this to work with videos and gifs you need the respective plugins as plasma5 does not support out of the box gifs and videos. For this use the "Get new plugins" from the "Set desktop wallpaper" menu.
+The script now can tell what kind of file is given and use that. For this to work with videos and gifs you need the respective plugins as plasma5 does not support out of the box gifs and videos. Unfortunately the scripts that I use are the older versions from rog131 which are not available anymore, but I have put them in zip in this repo and need to be extracted in `~/.local/share/plasma/wallpapers/`.
 
-Problems: Do not lock your widgets.
+Problems: Locking the widgets makes the script not work anymore. Rog131's scripts seem to make plasmashell crash quite often.
 
 # Lock screen
 So you want to change the wallpaper from the lock screen huh?
