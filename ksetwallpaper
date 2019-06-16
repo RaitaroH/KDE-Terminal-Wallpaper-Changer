@@ -22,6 +22,7 @@ wallpaper_set_script="var allDesktops = desktops();
         d = allDesktops[i];
         d.wallpaperPlugin = '${type}';
         d.currentConfigGroup = Array('Wallpaper', '${type}', 'General');
+        d.writeConfig('Image', 'file:///dev/null')
         d.writeConfig('$write', 'file://${full_image_path}')
     }"
 
