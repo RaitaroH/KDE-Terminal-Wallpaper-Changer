@@ -8,7 +8,7 @@ if [ -z "$2" ]; then
     case $(echo $ext | cut -d'/' -f2) in
         "mp4"|"webm") type='VideoWallpaper' ; write='VideoWallpaperBackgroundVideo';;
         "png"|"jpeg") type='org.kde.image' ; write='Image' ;;
-        "gif")        type='GifWallpaper' ; write="GifWallpaperBackgroundGif" ;;
+        "gif"|"webp") type='GifWallpaper' ; write="GifWallpaperBackgroundGif" ;;
     esac
 else
     type="$2";
